@@ -23,7 +23,7 @@ import animationData from "../animations/typing.json";
 import { SocketContext } from "../Context/SocketContext";
 import { MdOutlineVideoCall } from "react-icons/md";
 
-const ENDPOINT = "https://main--medotchat.netlify.app";
+const ENDPOINT = "https://small-talks-c376.onrender.com";
 //////////////////change this to your server address
 
 var socket, selectedChatCompare;
