@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+.App {
+  /* text-align: center; */
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    /* background-image : url('background_img.jpg'); */
+    /* background-image: linear-gradient(to right top, #02020c, #211f3e, #483270, #7d409f, #be48c9); */
+    background-image: url(backGROUND.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(136, 136, 136, 0.281);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: "#555";
+}
