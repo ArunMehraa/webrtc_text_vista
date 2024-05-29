@@ -23,7 +23,7 @@ import animationData from "../animations/typing.json";
 import { SocketContext } from "../Context/SocketContext";
 import { MdOutlineVideoCall } from "react-icons/md";
 
-const ENDPOINT = "http://localhost:1000";
+const ENDPOINT = "https://textvista.netlify.app";
 //////////////////change this to your server address
 
 var socket, selectedChatCompare;
