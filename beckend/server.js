@@ -57,7 +57,7 @@ const io = require('socket.io')(server, {
     pingTimeout: 60000,
     cors: {
         // origin: 'http://localhost:3000',
-        origin: 'https://textvista.netlify.app',
+        origin: 'https://medotchat.netlify.app',
     },
 });
 
