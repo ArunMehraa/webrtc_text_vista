@@ -5,7 +5,7 @@ import { ChatState } from "./ChatProvider";
 
 const SocketContext = createContext();
 
-const socket = io("http://localhost:1000"); ///////////////////////////change this to your server address
+const socket = io("https://textvista.netlify.app"); ///////////////////////////change this to your server address
 
 const ContextProvider = ({ children }) => {
   const { user } = ChatState();
