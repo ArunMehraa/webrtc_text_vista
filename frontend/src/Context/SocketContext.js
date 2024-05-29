@@ -92,17 +92,30 @@ const ContextProvider = ({ children }) => {
         trickle: false,
         config: {
           iceServers: [
-            {
-              urls: "stun:numb.viagenie.ca",
-              username: "sultan1640@gmail.com",
-              credential: "98376683",
-            },
-            {
-              urls: "turn:numb.viagenie.ca",
-              username: "sultan1640@gmail.com",
-              credential: "98376683",
-            },
-          ],
+      {
+        urls: "stun:stun.relay.metered.ca:80",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80?transport=tcp",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:443",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turns:global.relay.metered.ca:443?transport=tcp",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+  ],
         },
         stream: currentStream,
       });
@@ -134,17 +147,30 @@ const ContextProvider = ({ children }) => {
         trickle: false,
         config: {
           iceServers: [
-            {
-              urls: "stun:numb.viagenie.ca",
-              username: "sultan1640@gmail.com",
-              credential: "98376683",
-            },
-            {
-              urls: "turn:numb.viagenie.ca",
-              username: "sultan1640@gmail.com",
-              credential: "98376683",
-            },
-          ],
+          {
+        urls: "stun:stun.relay.metered.ca:80",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:80?transport=tcp",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turn:global.relay.metered.ca:443",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+      {
+        urls: "turns:global.relay.metered.ca:443?transport=tcp",
+        username: "4aa92d5a1bfe05c3d73ae7d8",
+        credential: "QcrisKrtiMAAJCqG",
+      },
+  ],
         },
         stream: currentStream,
       });
