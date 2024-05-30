@@ -2,7 +2,8 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import React, {useState} from "react";
 import { useToast } from '@chakra-ui/react'
 import axios from "axios";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
+import { ChatState } from "../../Context/ChatProvider";
 
 const Signup = () => {
 
@@ -103,7 +104,7 @@ const Signup = () => {
                     isClosable: true,
                     position: "bottom"
                 });
-
+                setUser(data)
                 localStorage.setItem("userInfo", JSON.stringify(data));
                 setLoading(false);
                 history.push("/chats");
