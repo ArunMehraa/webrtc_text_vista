@@ -18,6 +18,7 @@ const ContextProvider = ({ children }) => {
   const [calling, setCalling] = useState(false);
   const [userSocketId, setUserSocketId] = useState(null);
   const [receivingCall, setReceivingCall] = useState(false);
+  const [calleeOffline, setCalleeOffline] = useState(false);
 
   const myVideo = useRef(null);
   const userVideo = useRef(null);
@@ -39,9 +40,15 @@ const ContextProvider = ({ children }) => {
       setCall({ isReceivingCall: true, from, name: callerName, signal });
     };
 
+    const handleCalleeOffline = () => {
+      setCalleeOffline(true);
+    }
+
     socket.on("me", handleMe);
 
     socket.on("callUser", handleCallUser);
+
+    socket.on("calleeOffline",handleCalleeOffline);
 
     socket.on("callEnded", () => {
       setCallEnded(true);
@@ -229,6 +236,7 @@ const ContextProvider = ({ children }) => {
         calling,
         getStream,
         receivingCall,
+        calleeOffline
       }}
     >
       {children}
