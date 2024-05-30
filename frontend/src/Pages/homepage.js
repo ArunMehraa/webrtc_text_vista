@@ -33,7 +33,7 @@ const Homepage = () => {
                     fontWeight="bold"
                     color="white"
 
-                >Small Talks</Text>
+                >Text Vista</Text>
             </Box>
             <Box
                 bg={"whiteAlpha.900"}
