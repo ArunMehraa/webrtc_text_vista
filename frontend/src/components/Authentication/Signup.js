@@ -17,6 +17,7 @@ const Signup = () => {
     const [loading, setLoading] = useState(false);
     const toast = useToast();
     const history = useHistory();
+    const {setUser} = ChatState();
 
     const handleClick = () => setShow(!show);
 
