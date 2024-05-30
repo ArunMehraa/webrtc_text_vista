@@ -16,6 +16,7 @@ const VideoChat = () => {
     calling,
     leaveCall,
     receivingCall,
+    calleeOffline
   } = useContext(SocketContext);
   if (!calling && !receivingCall) return null;
   return (
@@ -39,6 +40,7 @@ const VideoChat = () => {
               callAccepted={callAccepted}
               calling={calling}
               leaveCall={leaveCall}
+              calleeOffline={calleeOffline}
             />
           ) : (
             <CalleeVideo
@@ -265,6 +267,7 @@ const CallerVideo = ({
   callEnded,
   leaveCall,
   calling,
+  calleeOffline
 }) => {
   const myVideoRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -362,6 +365,20 @@ const CallerVideo = ({
             justifyContent="center"
             overflow="hidden"
           >
+            {calleeOffline ? (
+              <Grid colSpan={1} w="100%" h="100%">
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  color="white"
+                  fontSize="xl"
+                  textAlign="center"
+                >
+                  The user you are trying to call is offline...
+                </Box>
+              </Grid>
+            ) : (
             <Grid colSpan={1} w="100%" h="100%">
               <video
                 playsInline
@@ -370,6 +387,7 @@ const CallerVideo = ({
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </Grid>
+            )}
             {/* My video - smaller and draggable */}
             <Box
               ref={myVideoRef}
