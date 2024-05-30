@@ -108,7 +108,7 @@ const SideDrawer = () => {
                 </Tooltip>
 
                 <Text fontSize="3xl" fontWeight="extrabold" textColor="white" textDecoration="Window" fontFamily='Work sans'>
-                    Small Talks
+                    Text Vista
                 </Text>
 
                 <div>
