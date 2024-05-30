@@ -111,7 +111,12 @@ io.on('connection', (socket) => {
 
     socket.on("callUser",({userToCall,signalData,from,name})=>{
         const userSocketId = clients[userToCall];
-        io.to(userSocketId).emit("callUser" ,{signal:signalData,from,name})
+        if(userSocketId){
+            io.to(userSocketId).emit("callUser" ,{signal:signalData,from,name})
+        }
+        else{
+            io.to(from).emit("calleeOffline");
+        }
     });
 
 
