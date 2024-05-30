@@ -5,7 +5,7 @@ import { ChatState } from "./ChatProvider";
 
 const SocketContext = createContext();
 
-const socket = io("https://medotchat.netlify.app"); ///////////////////////////change this to your server address
+const socket = io("https://small-talks-c376.onrender.com"); ///////////////////////////change this to your server address
 
 const ContextProvider = ({ children }) => {
   const { user } = ChatState();
